@@ -52,7 +52,9 @@ var char3 = {
 	}
 };
 
-var audio = new Audio('mario_theme_song.mp3');
+var audio = new Audio('win.mp3');
+var audio_gg = new Audio('game_over.mp3');
+var audio_theme = new Audio('mario_theme_song.mp3');
 
 //restart button
 $("#restart_button").click(function(){
@@ -60,10 +62,10 @@ $("#restart_button").click(function(){
 });
 
 
-char0 === false;
-char1 === false;
-char2 === false;
-char3 === false;
+// char0 === false;
+// char1 === false;
+// char2 === false;
+// char3 === false;
 
 // Character Selections and set ups
 //character0 set up
@@ -87,6 +89,7 @@ $("#character0").click(function(){
         
         if(char0.hp <= 0){
         	alert("You lose.. Game over...");
+        	audio_gg.play();
         }
         else if(char1.hp <= 0){
         	$("#row11").html("Ez pz, you win!");
@@ -118,6 +121,7 @@ $("#character0").click(function(){
         
         if(char0.hp <= 0){
         	alert("You lose.. Game over...");
+        	audio_gg.play();
         }
         else if(char2.hp <= 0){
         	$("#row11").html("Ez pz, you win!");
@@ -146,6 +150,7 @@ $("#character0").click(function(){
         
         if(char0.hp <= 0){
         	alert("You lose.. Game over...");
+        	audio_gg.play();
         }
         else if(char3.hp <= 0){
         	$("#row11").html("Ez pz, you win!");
@@ -179,6 +184,7 @@ $("#character1").click(function(){
         
         if(char1.hp <= 0){
         	alert("You lose.. Game over...");
+        	audio_gg.play();
         }
         else if(char0.hp <= 0){
         	$("#row11").html("Ez pz, you win!");
@@ -207,6 +213,7 @@ $("#character1").click(function(){
         
         if(char1.hp <= 0){
         	alert("You lose.. Game over...");
+        	audio_gg.play();
         }
         else if(char2.hp <= 0){
         	$("#row11").html("Ez pz, you win!");
@@ -235,6 +242,7 @@ $("#character1").click(function(){
         
         if(char1.hp <= 0){
         	alert("You lose.. Game over...");
+        	audio_gg.play();
         }
         else if(char3.hp <= 0){
         	$("#row11").html("Ez pz, you win!");
@@ -428,7 +436,7 @@ $("#character3").click(function(){
 
 
 
-
+ audio_theme.play();
 
 });
 
